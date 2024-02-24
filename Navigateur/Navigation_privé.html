@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Privée</title>
+    <style>
+      body {
+    background-color: black /* Remplacez cette valeur par la couleur que vous souhaitez */
+      }
+    
+        /* Stylisation du bouton */
+        button {
+            background: linear-gradient(to right, #6c5ce7, #0984e3); /* Dégradé de violet à bleu */
+            color: #fff; /* Texte en blanc */
+            padding: 10px 20px; /* Espacement interne */
+            border: none; /* Pas de bordure */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Curseur de la souris change au survol */
+            font-size: 16px; /* Taille de la police */
+        }
+
+        button:hover {
+            filter: brightness(110%); /* Légère augmentation de la luminosité au survol */
+        }
+
+        /* Styles pour la fenêtre modale */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: linear-gradient(to right, #6c5ce7, #0984e3); /* Dégradé de violet à bleu pour la fenêtre modale */
+            color: #fff; /* Texte en blanc */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Styles pour le fond obscurci lors de l'affichage de la modale */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* Stylisation pour le bouton de fermeture de la modale */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+      p{
+        color:white;
+      }
+              /* Style de la barre de navigation */
+        .navbar {
+            background-color: black; /* Couleur de fond */
+            overflow: hidden; /* Cacher les éléments qui dépassent */
+        }
+
+        /* Style des liens de navigation */
+        .navbar a {
+            float: left; /* Alignement à gauche */
+            display: block; /* Afficher comme un bloc */
+            color: #ededed; /* Couleur du texte */
+            text-align: center; /* Alignement du texte */
+            padding: 14px 16px; /* Espacement autour du texte */
+            text-decoration: none; /* Pas de soulignement */
+        }
+
+        /* Au survol des liens */
+        .navbar a:hover {
+            background-color: #ddd; /* Couleur de fond au survol */
+            color: black; /* Couleur du texte au survol */
+        }
+footer {
+            background-color: gray; /* Couleur de fond  */
+            color: white; /* Couleur du texte blanc pour contraster */
+            padding: 10px; /* Espacement interne pour le contenu */
+        
+}
+      
+    </style>
+</head>
+<body>
+
+    <!-- Votre barre de recherche CSE -->
+    <script>
+        var isPrivateMode = false; // Par défaut, le mode navigation privée est désactivé
+
+        function togglePrivateMode() {
+            isPrivateMode = !isPrivateMode;
+            if (isPrivateMode) {
+                showModal('Mode navigation privée activé');
+            } else {
+                window.location.href = 'index.html'; // Redirection vers index.html lorsque la navigation privée est désactivée
+            }
+        }
+
+        function performSearch() {
+            var searchQuery = document.getElementById('gsc-i-id1').value; // ID généré par Google pour la barre de recherche CSE
+
+            if (isPrivateMode) {
+                showModal('La recherche Google Custom Search est en mode navigation privée.');
+                // Vous pouvez ajouter ici la logique pour une recherche privée
+            } else {
+                showModal('Recherche normale : ' + searchQuery);
+                // Ajoutez ici votre traitement normal pour la recherche CSE
+            }
+        }
+
+        function showModal(message) {
+            var modal = document.getElementById('modal');
+            var overlay = document.getElementById('overlay');
+            var modalContent = document.getElementById('modal-content');
+
+            modalContent.innerHTML = message;
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            var overlay = document.getElementById('overlay');
+
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    </script>
+
+    <!-- Bouton stylisé -->
+    <button onclick="togglePrivateMode()"> Appuyez pour activer le Mode Navigation Privée</button>
+
+    <!-- Fenêtre modale -->
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-content"></div>
+    </div>
+
+    <script>
+      (function() {
+        var cx = 'd7d1260caaf134b5a'; // Remplacez par votre clé CSE
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+
+    <gcse:search></gcse:search>
+
+
+
+
+   <div id="shortcut-container">
+        <h4>Raccourcis</h4>
+        <div id="shortcut-list">
+            <!-- La liste des raccourcis sera générée ici -->
+        </div>
+        <button class="add-button" onclick="ajouterRaccourci()">+</button>
+    </div>
+
+    <script>
+        function ajouterRaccourci() {
+            var name = prompt("Nom du site :");
+            var url = prompt("URL du site n'oubliez pas https//:");
+            if (name && url) {
+                var shortcuts = JSON.parse(localStorage.getItem("shortcuts")) || [];
+                shortcuts.push({ name: name, url: url });
+                localStorage.setItem("shortcuts", JSON.stringify(shortcuts));
+                afficherRaccourcis();
+            }
+        }
+
+        function afficherRaccourcis() {
+            var shortcuts = JSON.parse(localStorage.getItem("shortcuts")) || [];
+            var shortcutList = document.getElementById("shortcut-list");
+            shortcutList.innerHTML = "";
+
+            shortcuts.forEach(function(shortcut) {
+                var div = document.createElement("div");
+                div.className = "shortcut";
+
+                var img = document.createElement("img");
+                img.src = `https://www.google.com/s2/favicons?domain=${shortcut.url}`;
+                img.alt = shortcut.name;
+
+                var a = document.createElement("a");
+                a.href = shortcut.url;
+                a.textContent = shortcut.name;
+
+                div.appendChild(img);
+                div.appendChild(a);
+                shortcutList.appendChild(div);
+            });
+        }
+
+        // Appel initial pour afficher les raccourcis sauvegardés
+        afficherRaccourcis();
+  </script>
+<footer>
+<h3>Les Dork les plus recherchés :</h3>
+  <a href="https://cse.google.com/cse?cx=42e2300fe3cb14d6a#gsc.tab=0&gsc.q=inurl%3A%2Flogin.rsp&gsc.sort=">inurl:/login.rsp</a> 
+<p>cible les webcams en ligne</p>
+<a href="https://cse.google.com/cse?cx=42e2300fe3cb14d6a#gsc.tab=0&gsc.sort=&gsc.q=inurl%3A%2Fsignin.php%3Fret%3D&gsc.page=2">inurl:/signin.php?ret=</a>
+  <p>cible un logiciel de conférence en ligne</p>
+<a href="https://cse.google.com/cse?cx=42e2300fe3cb14d6a#gsc.tab=0&gsc.sort=&gsc.q=filetype%3A%20.png">filetype: png</a>
+  <p>permet de rechercher un type de fichier précis.</p>
+<a href="https://cse.google.com/cse?cx=42e2300fe3cb14d6a#gsc.tab=0&gsc.sort=&gsc.q=inurl%3A%22index.php%3Fid%3D%22%20OR%20inurl%3A%22page.php%3Fid%3D%22%20%22mot-cl%C3%A9%22">inurl:"index.php?id=" OR inurl:"page.php?id=" "mot-clé"</a>
+
+  <p>Affiche les sites qui pourraient être vulnérables aux attaques SQL</p>
+  <a href="https://google-dork.loscripts.repl.co/">PLUS ...</a>
+
+</footer>
+  
+  <div class="navbar">
+    <a href="https://site.iloscripts.repl.co ">Site loSCripts</a>
+    <a href="Dork list.html">Dork list</a>
+    <a href="https://replit.com/@IlaHeydari">loSCripts pro</a>
+    <a href="génération.html">Outil de génération</a>
+    <a href="https://socialblade.com/">Recherche de Profils</a>
+
+ <!-- Ajoutez d'autres liens ici -->
+  </div>
+</body>
+</html>

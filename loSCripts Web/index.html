@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+ 
+    <title>loSCripts Web</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/faker@5.5.3/build/faker.min.js"></script>
+
+    <h1>loSCripts Web</h1>
+    <p>loSCripts: script développé pour l'osint (open source intelligent)</p>
+
+    <div id="terminal">
+        <div id="options">
+            <p>1. Générer une fausse identité</p>
+            <p>2. Localiser numéro de téléphone</p>
+            <p>3. Générer un mot de passe sécurisé</p>
+            <p>4. Pour voir l'adresse IP de cet appareil</p>
+            <p>5. Utiliser la fonctionnalité Google Dork</p>
+        </div>
+        <input type="text" id="terminal-input" onkeydown="handleCommand(event)">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

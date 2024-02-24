@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemples de Google Dorks</title>
+    <style>
+        body {
+    background-color:black;
+}
+
+      h1{
+        color :violet;
+      }
+      p{
+        color:green;
+      }
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-input {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        h1, p {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voici des exemples de Google Dorks :</h1>
+
+    <div class="search-bar">
+        <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un Dork...">
+        <button class="search-button" onclick="searchDork()">Rechercher</button>
+    </div>
+
+    <p><strong>inurl:/login.rsp</strong>: cible les webcams en ligne</p>
+
+    <p><strong>inurl:/signin.php?ret=</strong>: cible un logiciel de conférence en ligne</p>
+
+    <p><strong>filetype: png</strong>: permet de rechercher un type de fichier précis.</p>
+
+    <p><strong>inurl:"index.php?id=" OR inurl:"page.php?id=" "mot-clé"</strong>: Affiche les sites qui pourraient être vulnérables aux attaques SQL.</p>
+
+    <p><strong>site:linkedin.com/in/ "mot-clé"</strong>: Recherche de profils LinkedIn</p>
+
+    <p><strong>inurl:"/admin/login"</strong>: Recherche les pages de connexion d'administration.</p>
+
+    <p><strong>filetype:log "mot-clé"</strong>: Recherche des fichiers journaux contenant un mot-clé spécifique.</p>
+
+    <p><strong>intext:"powered by WordPress" "mot-clé"</strong>: Recherche des sites web alimentés par WordPress contenant un mot-clé.</p>
+
+    <p><strong>intitle:"index of" "mot-clé"</strong>: Recherche des répertoires et fichiers avec le mot-clé dans leur titre.</p>
+
+    <p><strong>site:.gouv "mot-clé"</strong>: Recherche des sites gouvernementaux contenant un mot-clé spécifique.</p>
+
+    <p><strong>inurl:"/forum/index.php"</strong>: Recherche des forums avec "index.php" dans l'URL.</p>
+
+    <p><strong>site:edu "mot-clé"</strong>: Recherche des sites Web d'institutions éducatives contenant un mot-clé.</p>
+
+    <p><strong>filetype:pdf "mot-clé"</strong>: Recherche des fichiers PDF contenant un mot-clé spécifique.</p>
+
+    <p><strong>intext:"confidential" filetype:doc</strong>: Recherche des fichiers DOC contenant le mot "confidential".</p>
+
+    <p><strong>intitle:"index of" inurl:/wp-content/uploads/</strong>: Recherche des répertoires de téléchargement de fichiers WordPress.</p>
+
+    <p><strong>intitle:"login" "mot-clé"</strong>: Recherche des pages de connexion contenant un mot-clé.</p>
+
+    <p><strong>intext:"username" intext:"password"</strong>: Recherche des pages Web contenant les mots "username" et "password".</p>
+
+    <script>
+        function searchDork() {
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            var paragraphs = document.querySelectorAll("p");
+
+            paragraphs.forEach(function(paragraph) {
+                var text = paragraph.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    paragraph.style.display = "block";
+                } else {
+                    paragraph.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

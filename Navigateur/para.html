@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paramètres</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: darkviolet;
+    }
+
+    select {
+      margin-top: 10px;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    video {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <footer>
+    <h1>Paramètres</h1>
+  </footer>
+
+  <select id="colorSelector">
+    <option value="#f0f0f0">Couleur par défaut</option>
+    <option value="#ff9999">Rose pâle</option>
+    <option value="#66cc66">Vert clair</option>
+    <option value="#9999ff">Bleu clair</option>
+    <option value="#ffff99">Jaune pâle</option>
+    <option value="#ffcc99">Orange clair</option>
+    <option value="#cc99ff">Violet clair</option>
+    <option value="#99cccc">Turquoise</option>
+    <option value="#ff6666">Rouge vif</option>
+    <option value="#00cc99">Vert émeraude</option>
+    <option value="#333333">Noir</option>
+    <option value="#ffffff">Blanc</option>
+  </select>
+
+  <script>
+    const colorSelector = document.getElementById('colorSelector');
+
+    colorSelector.addEventListener('change', function () {
+      const selectedColor = colorSelector.value;
+      window.location.href = `index.html?color=${encodeURIComponent(selectedColor)}`;
+    });
+  </script>
+
+  <br>
+
+  <a href="https://loscripts-dork.loscripts.repl.co/index.html?color=%23333333#gsc.tab=0">Dark</a> /
+  <a href="https://loscripts-dork.loscripts.repl.co/index.html?color=%23ffffff#gsc.tab=0">clair</a>
+
+  <h5>Appuyez deux fois sur l'écran d'accueil pour changer la couleur.</h5>
+  <h5>Secouez votre téléphone pour faire apparaître un fond d'écran.</h5>
+  <h5>Faites glisser votre doigt vers la droite pour faire apparaître la recherche avancée de Google.</h5>
+
+  <h5>Appuyez sur le SC de loSCripts en haut à gauche pour afficher l'heure.</h5>
+
+  <video width="100%" controls>
+    <source src="pub.mp4" type="video/mp4">
+    Votre navigateur ne prend pas en charge la lecture vidéo.
+  </video>
+</body>
+
+</html>

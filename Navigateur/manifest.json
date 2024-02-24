@@ -1,0 +1,14 @@
+{
+  "name": "LoSCripts Dork",
+  "short_name": "LoSCripts Dork",
+  "start_url": "https://loscripts-dork.loscripts.repl.co",
+  "display": "standalone",
+  "prefer_related_applications": true, // Empêche l'ouverture dans le navigateur Chrome
+  "icons": [
+    {
+      "src": "pub.mp4", // Remplacez par le chemin de votre vidéo
+      "type": "video/mp4",    // Type MIME de votre vidéo
+      "sizes": "192x192"      // Taille de l'icône
+    }
+  ]
+}

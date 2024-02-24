@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google dork</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(to right, #8e24aa, #2196f3); /* Dégradé violet à bleu */
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        /* Style pour les champs de texte */
+        input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            width: 80%; /* Largeur du champ de texte */
+        }
+
+        /* Style pour la popup */
+        .popup {
+            background-color: ; /* Couleur de fond de la popup */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre */
+            max-width: 400px; /* Largeur maximale de la popup */
+            margin: 0 auto; /* Centrer la popup horizontalement */
+        }
+      .icon {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+      }
+    </style>
+</head>
+<body> 
+  <a href="../../index.html">
+    <svg class="icon">
+      <use xlink:href="#icon-circle-left"></use>
+    </svg>
+  </a>
+
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-circle-left" viewBox="0 0 32 32">
+        <path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z"></path>
+        <path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
+      </symbol>
+    </defs>
+  </svg>
+    <script>
+        function animateSlash() {
+            const animation = "/-\\|";
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    document.getElementById("output").innerText = animation[i % animation.length];
+                }, i * 100);
+            }
+            setTimeout(() => {
+                document.getElementById("output").innerText = "\nAucune mise à jour.\nhttps://update.ilaheydari.repl.co\n\n-------------------------------------\n\n1.Recherche de fichiers spécifiques sur Google(par exemple, des fichiers PDF)\n2.Voir le cache d'une page web\n3.Chercher un nom de domaine\n4.Voir les informations d'un site web\n5.Chercher une phrase exacte sur Google\n6.Voir plus d'exemple de Google Dork\n7.Aller dans notre moteur de recherche de dork";
+            }, 20 * 100);
+        }
+
+        function performSearch(option) {
+            switch (option) {
+                case "1":
+                    const fichier2 = prompt("Entrez le nom du document que vous voulez chercher (par exemple : Fiches de révision) : ");
+                    const fichier1 = prompt("Entrez le numéro correspondant à votre choix :\n1.Fichiers texte (TXT)\n2.Fichiers (ZIP)\n3.Fichiers (CSV)\n4.Fichiers (JSON)\n5.Fichiers (RAR)\n6.Fichiers Excel (XLS)\n7.Fichiers Excel (XLSX)\n8.Fichiers PowerPoint (PPT)\n9.Fichiers PowerPoint (PPTX)\n10.Fichiers Word (DOC)\n11.Fichiers Word (DOCX)\n12.Fichiers (XML)\n13.Fichiers (PDF)");
+                    if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"].includes(fichier1)) {
+                        const result = `${fichier2} filetype:${["txt", "zip", "csv", "json", "rar", "xls", "xlsx", "ppt", "pptx", "doc", "docx", "xml", "pdf"][parseInt(fichier1) - 1]}`;
+                        document.getElementById("output").innerText = `Copiez ce texte dans Google pour des résultats précis:\n\n${result}`;
+                    } else {
+                        document.getElementById("output").innerText = "Option de fichier invalide.";
+                    }
+                    break;
+
+                case "2":
+                    const cache = prompt("Quel site voulez-vous utiliser pour voir le cache? (par exemple : www.google.com)");
+                    document.getElementById("output").innerText = `cache:${cache}\nCopiez ce résultat dans Google pour avoir des résultats précis`;
+                    break;
+
+                case "3":
+                    const domain = prompt("Entrez le nom de domaine spécifiques du site. Auquel vous voulez chercher (SANS ESPACE, Exemple : .gouv)");
+                    document.getElementById("output").innerText = `inurl : ${domain}/`;
+                    break;
+
+                case "4":
+                    const info = prompt("Entrez les informations à rechercher :");
+                    document.getElementById("output").innerText = `info : ${info}`;
+                    break;
+
+                case "5":
+                    const phrase = prompt("Entrez une phrase :");
+                    document.getElementById("output").innerText = `"${phrase}"\nCopiez ce résultat dans Google pour avoir des résultats précis`;
+                    break;
+
+                case "6":
+                    document.getElementById("output").innerText = "https://update.ilaheydari.repl.co";
+                    break;
+
+                case "7":
+                    document.getElementById("output").innerText = "https://loscripts-dork.loscripts.repl.co";
+                    break;
+
+                default:
+                    document.getElementById("output").innerText = "Option invalide.";
+                    break;
+            }
+        }
+    </script>
+
+    <h1>Les Google Dork</h1>
+
+
+    <div id="output"></div>
+
+    <script>
+        animateSlash();
+
+        setTimeout(() => {
+            const recherche = prompt("Entrez le numéro de l'option : ");
+            performSearch(recherche);
+        }, 20 * 100);
+    </script>
+  <p>1. Recherche de fichiers spécifiques sur Google (par exemple, des fichiers PDF)</p>
+  <p>2. Voir le cache d'une page web</p>
+  <p>3. Chercher un nom de domaine</p>
+  <p>4. Voir les informations d'un site web</p>
+  <p>5. Chercher une phrase exacte sur Google</p>
+  <p>6. Voir plus d'exemples de Google Dork</p>
+  <p>7. Allez dans notre moteur de recherche de Dork</p>
+
+</body>
+</html>

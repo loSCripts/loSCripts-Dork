@@ -1,0 +1,187 @@
+
+
+h1{
+  color:darkviolet;
+}
+
+
+        .custom-text {
+            color: black;
+        }
+
+        .highlight {
+            color: purple;
+            margin-right: -0.3em; /* Ajuster la marge pour réduire l'espace à droite de SC */
+            margin-left: -0.2em; /* Ajuster la marge pour réduire l'espace à gauche de SC */
+        }
+    
+
+        /* Style de la barre de navigation */
+        .navbar {
+            background-color: black; /* Couleur de fond */
+            overflow: hidden; /* Cacher les éléments qui dépassent */
+        }
+
+        /* Style des liens de navigation */
+        .navbar a {
+            float: left; /* Alignement à gauche */
+            display: block; /* Afficher comme un bloc */
+            color: #ededed; /* Couleur du texte */
+            text-align: center; /* Alignement du texte */
+            padding: 14px 16px; /* Espacement autour du texte */
+            text-decoration: none; /* Pas de soulignement */
+        }
+
+        /* Au survol des liens */
+        .navbar a:hover {
+            background-color: #ddd; /* Couleur de fond au survol */
+            color: black; /* Couleur du texte au survol */
+        }
+footer {
+            background-color: gray; /* Couleur de fond  */
+            color: white; /* Couleur du texte blanc pour contraster */
+            padding: 10px; /* Espacement interne pour le contenu */
+        
+}
+ 
+    /* Style pour le lien en haut à droite 
+    .lien-haut-droite {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px ; /* Ajoutez un peu d'espacement pour le rendre plus visible */
+    }
+h3{
+  color:;
+}
+        #image-container {
+            position: absolute;
+            top:0;
+            right:0;
+            padding: 15px;
+        }
+/*
+#shortcut-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .shortcut {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .shortcut img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .add-button {
+            display: block;
+            margin: 10px auto;
+            font-size: 24px;
+        }*/
+#shortcut-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.shortcut {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.shortcut img {
+    width: 20px;
+    height: 20px;
+}
+
+.add-button {
+    display: block;
+    margin: 10px auto;
+    font-size: 24px;
+    background: linear-gradient(to right, violet, blue); /* Ajout du dégradé violet-bleu */
+    color: white; /* Texte en blanc pour une meilleure lisibilité */
+    border: none; /* Suppression de la bordure pour un aspect plus propre */
+    padding: 5px 10px; /* Ajustement du rembourrage pour un meilleur aspect */
+}
+
+
+.news-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .news-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .news-item:hover {
+            background-color: #f5f5f5;
+        }
+        .news-item img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+        }
+        .news-item-content {
+            display: none;
+        }
+
+.gcse-search{
+  position: sticky;
+
+}
+
+        #redirectButton:hover {
+            filter: brightness(110%); /* Légère augmentation de la luminosité au survol */
+        }
+
+
+
+
+    .content {
+        /* Ajoutez du style à votre contenu principal ici */
+    }
+
+    .bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .bottom-bar button {
+        margin: 0 15px; /* Augmentez l'espace entre les boutons */
+        padding: 8px 16px;
+        background-color: #555;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .back-arrow, .forward-arrow {
+        font-size: 20px;
+    }
+
+    .private-arrow {
+        font-size: 18px;
+    }
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(to right, #8e24aa, #2196f3); /* Dégradé violet à bleu */
+  margin: 0; /* Supprime les marges par défaut du corps */
+  height: 100vh; /* 100% de la hauteur de la vue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: #fff; /* Couleur du texte en blanc pour un meilleur contraste */
+}
+
+.assistant-container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(to right, #8e44ad, #3498db); /* Dégradé violet-bleu */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #82b6d9, #8e44ad); /* Inversion du dégradé au survol */
+}
+h1{
+  color:#95a8d5;
+}

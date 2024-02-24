@@ -1,0 +1,38 @@
+#terminal {
+    background-color: black;
+    color: white;
+    width: 500px;
+    height: 500px;
+    font-family: monospace;
+    font-size: 16px;
+    border: 1px solid white;
+    padding: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#options {
+    margin-bottom: 10px; /* Ajout d'une marge en bas pour séparer les options de l'input */
+}
+
+#terminal input {
+    /* Ajout de styles pour aligner le texte à l'intérieur de l'input */
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+
+h1 {
+  color: #002900;
+}
+p {
+  color: green;
+}
+body {
+  background-color: #004d00;
+}

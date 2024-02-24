@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur aléatoire</title>
+    <style>
+        body {
+          background: linear-gradient(to right, #8e24aa, #2196f3); /* Dégradé violet à bleu */
+        }
+      button {
+          background: linear-gradient(to right, #8e24aa, #2196f3); /* Dégradé violet à bleu */
+          color: white;
+          padding: 10px;
+          margin: 5px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+      .icon {
+        display: inline-block;
+        width: 5em;
+        height: 5em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+      }
+    </style>
+</head>
+<body>
+ 
+  <a href="../../../index.html">
+    <svg class="icon">
+      <use xlink:href="#icon-circle-left"></use>
+    </svg>
+  </a>
+
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-circle-left" viewBox="0 0 32 32">
+        <path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z"></path>
+        <path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
+      </symbol>
+    </defs>
+  </svg>
+  <center>
+    <h1>Générateur aléatoire :</h1>
+
+    <button onclick="genererPrenom()">Générer un prénom</button>
+    <p id="prenom"></p>
+
+    <button onclick="genererAdresseEmail()">Générer une adresse e-mail</button>
+    <p id="email"></p>
+
+    <button onclick="genererTelephone()">Générer un numéro de téléphone</button>
+    <p id="telephone"></p>
+
+    <button onclick="genererAdresse()">Générer une adresse</button>
+    <p id="adresse"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/faker@5.5.3/build/faker.min.js"></script>
+    <script>
+        faker.locale = "fr";
+
+        function genererPrenom() {
+            const prenom = faker.name.firstName();
+            document.getElementById("prenom").textContent = "Prénom généré : " + prenom;
+        }
+
+        function genererAdresseEmail() {
+            const email = faker.internet.email();
+            document.getElementById("email").textContent = "Adresse e-mail générée : " + email;
+        }
+
+        function genererTelephone() {
+            const telephone = faker.phone.phoneNumber();
+            document.getElementById("telephone").textContent = "Numéro de téléphone généré : " + telephone;
+        }
+
+        function genererAdresse() {
+            const adresse = faker.address.streetAddress() + ", " + faker.address.city() + ", " + faker.address.country();
+            document.getElementById("adresse").textContent = "Adresse générée : " + adresse;
+        }
+</script>
+
+<a href="https://thispersondoesnotexist.com/">clique là pour générer un visage</a>
+    </center>
+</body>
+</html>

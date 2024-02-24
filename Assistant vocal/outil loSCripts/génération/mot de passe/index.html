@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mot de Passe</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #8e24aa, #2196f3); /* Dégradé violet à bleu */
+        }
+
+        #password {
+            font-size: 2em;
+            font-weight: bold;
+            padding: 20px;
+            border: none; 
+            border-radius: 5px;
+            text-align: center;
+        }
+      .icon {
+        display: inline-block;
+        width: 5em;
+        height: 5em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+      }
+    </style>
+</head>
+<body>
+
+
+
+
+
+  <a href="../../../index.html">
+    <svg class="icon">
+      <use xlink:href="#icon-circle-left"></use>
+    </svg>
+  </a>
+
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-circle-left" viewBox="0 0 32 32">
+        <path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z"></path>
+        <path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
+      </symbol>
+    </defs>
+  </svg>
+
+
+  
+    <div id="password"></div>
+
+    <script>
+        function generatePassword() {
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+            const passwordLength = 12;
+            let password = '';
+
+            for (let i = 0; i < passwordLength; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                password += characters.charAt(randomIndex);
+            }
+
+            document.getElementById("password").textContent = password;
+        }
+
+
+        generatePassword();
+    </script>
+
+</body>
+</html>

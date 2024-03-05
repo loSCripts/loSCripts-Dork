@@ -1,6 +1,6 @@
 # loSCripts Dork - Moteur de recherche avancé
 
-loSCripts Dork est un moteur de recherche créé avec Google CSE. Il est rapide, sécurisé, puissant et intuitif. Fonctionnant avec des Google Dorks, il permet une recherche précise et peut être utilisé pour l'OSINT grâce à ses fonctionnalités intégrées ! Sur votre navigateur, vous pourrez apercevoir un assistant vocal qui facilite l'utilisation du logiciel loSCripts en permettant des commandes vocales. 
+LoSCripts Dork est un moteur de recherche créé avec Google CSE. Il est rapide, sécurisé, puissant et intuitif. Fonctionnant avec des Google Dorks, il permet une recherche précise et peut être utilisé pour l'OSINT grâce à ses fonctionnalités intégrées ! Sur ce navigateur, vous pourrez apercevoir un assistant vocal qui facilite l'utilisation du logiciel loSCripts pro en permettant des commandes vocales. Il y a plein d'autres fonctionnalités à découvrir, alors n'attendez pas.
 
 Découvrez loSCripts Dork : [https://loscripts.github.io/loSCripts-Dork/](https://loscripts.github.io/loSCripts-Dork/)
 

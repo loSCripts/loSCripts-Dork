@@ -1,17 +1,10 @@
-loSCripts Dork est un Moteur de recherche créé avec google cse
-il est rapide, sécurisée, puissant et intuitif. 
-Il fonctionne avec du google dorks pour rendre la recherche plus précise et peux être utilisé pour l'osint grâce au fonctionnalités intégrée ! 
+# loSCripts Dork - Moteur de recherche avancé
 
-https://loscripts.github.io/loSCripts-Dork/  
+loSCripts Dork est un moteur de recherche créé avec Google CSE. Il est rapide, sécurisé, puissant et intuitif. Fonctionnant avec des Google Dorks, il permet une recherche précise et peut être utilisé pour l'OSINT grâce à ses fonctionnalités intégrées ! Sur votre navigateur, vous pourrez apercevoir un assistant vocal qui facilite l'utilisation du logiciel loSCripts en permettant des commandes vocales. 
 
-![image](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/38b311f3-cadd-487f-99fe-c3df1d8bb60d)![image](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/3594e76d-a051-4221-a9be-50d687c07fdb)
-![image](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/36ef749f-613a-40aa-9653-0a3fe40c0ad5) 
+Découvrez loSCripts Dork : [https://loscripts.github.io/loSCripts-Dork/](https://loscripts.github.io/loSCripts-Dork/)
 
-
-Sur votre navigateur, vous pourrez apercevoir un assistant vocal qui facilite l'utilisation du logiciel loSCripts en permettant des commandes vocales.
-
-![image](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/4a7970e9-e09c-4708-ad8a-c83796cfb79d)
-
-
-
-
+![Image 1](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/38b311f3-cadd-487f-99fe-c3df1d8bb60d)
+![Image 2](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/3594e76d-a051-4221-a9be-50d687c07fdb)
+![Image 3](https://github.com/loSCripts/loSCripts-Dork/assets/130851524/36ef749f-613a-40aa-9653-0a3fe40c0ad5)
+<img src="https://github.com/loSCripts/loSCripts-Dork/assets/130851524/d889eb45-1ac4-4795-95f2-04c7cbc2afb3" width="200" height="200" alt="Image 4" style="display:inline; margin-right: 10px;">

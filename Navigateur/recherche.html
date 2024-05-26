@@ -29,6 +29,26 @@
 
   </footer>
 
+<!-- Barre en bas de la page -->
+    <div class="bottom-bar">
+        <button onclick="goBack()" title="Retour"><span class="back-arrow">&#8592;</span></button>
+        <button onclick="goPrivate()" title="Navigation privée"><span class="private-arrow">&#128274;</span></button>
+        <button onclick="goForward()" title="Avancer"><span class="forward-arrow">&#8594;</span></button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goForward() {
+            window.history.forward();
+        }
+
+        function goPrivate() {
+            window.location.href = "Navigateur/Navigation_privé.html";
+        }
+    </script> 
 </body>
 
 </html>

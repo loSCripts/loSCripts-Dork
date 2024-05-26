@@ -32,37 +32,3 @@
 </body>
 
 </html>
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clavier Automatique</title>
-    <script async src="https://cse.google.com/cse.js?cx=42e2300fe3cb14d6a"></script>
-</head>
-<body>
-    <input type="text" id="searchInput" placeholder="Rechercher...">
-    <button id="openKeyboard">Ouvrir le clavier</button>
-
-    <script>
-        const searchInput = document.getElementById('searchInput');
-        const openKeyboardButton = document.getElementById('openKeyboard');
-
-        // Ouvre le clavier automatiquement lorsque l'utilisateur clique sur le bouton
-        openKeyboardButton.addEventListener('click', () => {
-            searchInput.focus();
-        });
-
-        // Envoie le texte saisi dans la barre de recherche CSE
-        searchInput.addEventListener('input', (event) => {
-            const searchText = event.target.value;
-            console.log('Texte saisi :', searchText);
-            // Vous pouvez ajouter ici la logique pour effectuer la recherche avec CSE
-            // Par exemple, utilisez la fonction de recherche CSE appropriée pour envoyer le texte saisi.
-        });
-    </script>
-    <div class="gcse-search"></div>
-</body>
-</html>

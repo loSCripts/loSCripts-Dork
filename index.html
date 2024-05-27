@@ -108,6 +108,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
+<style>
+/* Style de la barre de recherche */
+#searchBar {
+    border: 2px solid #555;
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px; /* Bords arrondis */
+    background-image: linear-gradient(to right, #007bff, #6a11cb); /* Dégradé bleu violet */
+    color: white;
+}
+
+/* Style du bouton de recherche */
+#searchButton {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px; /* Bords arrondis */
+    border: none;
+    background-color: #6a11cb; 
+    color: white;
+}
+
+
+#searchButton::before {
+    content: '\1F50D';
+    margin-right: 10px;
+}
+</style>
+<script>
+function redirectToUrl() {
+    var url = document.getElementById('searchBar').value;
+    if(url) {
+        
+        if (!url.match(/^[a-zA-Z]+:\/\//)) {
+            url = 'https://' + url;
+        }
+        window.location.href = url;
+    } else {
+        alert('Veuillez entrer une URL.');
+    }
+}
+</script>
+
+<input type="text" id="searchBar" placeholder="URL ici" />
+<button id="searchButton" onclick="redirectToUrl()"></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     
     
 </script>

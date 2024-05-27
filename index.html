@@ -136,18 +136,24 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </style>
 <script>
+// Style de l'alerte ajouté dans la fonction redirectToUrl
 function redirectToUrl() {
     var url = document.getElementById('searchBar').value;
     if(url) {
-        
+        // Vérifie si l'URL commence déjà par 'http://' ou 'https://'
         if (!url.match(/^[a-zA-Z]+:\/\//)) {
             url = 'https://' + url;
         }
         window.location.href = url;
     } else {
-        alert('Veuillez entrer une URL.');
+        // Crée un élément div pour l'alerte
+        var alertDiv = document.createElement('div');
+        alertDiv.innerHTML = 'Veuillez entrer une URL.';
+        alertDiv.style.color = 'black'; // Couleur du texte de l'alerte en noir
+        document.body.appendChild(alertDiv);
     }
 }
+
 </script>
 
 <input type="text" id="searchBar" placeholder="URL ici" />

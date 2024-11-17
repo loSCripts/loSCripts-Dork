@@ -71,14 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 </script> 
 
-<script>
-    // Récupérez l'image sélectionnée depuis le local storage
-    const selectedImage = localStorage.getItem('selectedImage');
 
-    if (selectedImage) {
-      document.body.style.backgroundImage = `url(${selectedImage})`;
-    }
-  </script>
 
 
      <script>
@@ -124,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Style du bouton de recherche */
 #searchButton {
     cursor: pointer;
-    padding: 10px;
+    padding: 8px;
     border-radius: 20px; /* Bords arrondis */
     border: none;
     background-color: #6a11cb; 
